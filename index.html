@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio da Yasmin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #fff7f9;
+      color: #4a2335;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: white;
+    }
+
+    .logo {
+      color: #b8336a;
+      font-size: 22px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul a {
+      color: #4a2335;
+      text-decoration: none;
+    }
+
+    nav ul a:hover {
+      color: #b8336a;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #ffe3ec;
+    }
+
+    .foto {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid white;
+    }
+
+    header h1 {
+      font-size: 50px;
+      color: #b8336a;
+      margin: 10px 0 0;
+    }
+
+    header p {
+      font-size: 18px;
+      margin: 5px 0 25px;
+    }
+
+    .botao {
+      display: inline-block;
+      background-color: #b8336a;
+      color: white;
+      text-decoration: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      transition: 0.2s;
+    }
+
+    .botao:hover {
+      background-color: #8c2550;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      color: #b8336a;
+      margin-top: 0;
+    }
+
+    blockquote {
+      margin: 30px 0;
+      padding: 20px 25px;
+      background-color: #ffe3ec;
+      border-radius: 15px;
+      font-style: italic;
+      font-size: 18px;
+    }
+
+    blockquote p {
+      margin: 10px 0 0;
+      font-style: normal;
+      font-size: 15px;
+      color: #b8336a;
+    }
+
+    .habilidades {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .habilidades li {
+      background-color: white;
+      color: #b8336a;
+      border: 2px solid #f4a6c0;
+      padding: 5px 15px;
+      border-radius: 20px;
+    }
+
+    .projetos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 10px #f3d3df;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+    }
+
+    .card h3 {
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #7d5566;
+    }
+
+    #contato {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #7d5566;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 38px;
+      }
+
+      .projetos {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="logo">Yasmin</a>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <img src="foto.png" alt="Foto da Yasmin" class="foto">
+    <h1>Yasmin</h1>
+    <p>Estudante de Desenvolvimento de Sistemas na ETEC</p>
+    <a href="#projetos" class="botao">Ver projetos</a>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>
+      Tenho 15 anos, estudo na ETEC e faço curso de Desenvolvimento de Sistemas.
+      Sou uma garota que gosta de aprender coisas novas, conhecer oportunidades e
+      sempre buscar evoluir. Tenho muita vontade de crescer na vida, conquistar meus
+      objetivos e construir um futuro que me orgulhe. Sou curiosa, dedicada e estou
+      disposta a aprender, me desafiar e aproveitar cada oportunidade que surgir para
+      me tornar uma pessoa cada vez melhor.
+    </p>
+
+    <blockquote>
+      "Grandes realizações não são feitas por impulso, mas por uma soma de pequenas realizações"
+      <p>- Vincent van Gogh</p>
+    </blockquote>
+
+    <h3>Habilidades</h3>
+    <ul class="habilidades">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Git e GitHub</li>
+      <li>Vercel</li>
+    </ul>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+
+    <div class="projetos">
+      <div class="card">
+        <img src="yasmin/yasmin/logoAeroFly.png" alt="Logo AeroFly">
+        <h3>AeroFly</h3>
+        <p>Site de uma agência de viagens. Tem página de destinos, aluguel de carros e uma página para montar o plano de viagem.</p>
+        <a href="yasmin/yasmin/YASAERO.html" class="botao">Ver projeto</a>
+      </div>
+
+      <div class="card">
+        <img src="filme.png" alt="Logo LOCAmovie">
+        <h3>LOCAmovie</h3>
+        <p>Site de uma locadora de filmes. Tem página inicial com filmes em destaque, catálogo de filmes, página sobre a loja e contato.</p>
+        <a href="locadora_filmes_rodol%20(FINAL)/locadora_filmes_rodol%20(2)/locadora_filmes_rodol/locadora_filmes_rodol/pagina.1.html" class="botao">Ver projeto</a>
+      </div>
+
+      <div class="card">
+        <img src="cupcake.png" alt="Logo Bolinho de Cenoura">
+        <h3>Bolinho de Cenoura</h3>
+        <p>Página de receita de bolinho de cenoura, com ingredientes e modo de preparo da massa e da cobertura.</p>
+        <a href="aula07bolinho_Yasmin/aula07bolinho/aula07bolinho/aula%2007.html" class="botao">Ver projeto</a>
+      </div>
+
+      <div class="card">
+        <img src="calculadora.png" alt="Logo Cadastro de Alunos">
+        <h3>Cadastro de Alunos</h3>
+        <p>Sistema feito com JavaScript para cadastrar alunos e notas. Mostra se cada aluno foi aprovado ou reprovado e conta o total de aprovados e reprovados.</p>
+        <a href="calculadora/index.html" class="botao">Ver projeto</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <a href="mailto:yasmin@email.com" class="botao">Mandar email</a>
+    <a href="https://github.com/yasmingabriellecaldeirabarros-web" target="_blank" class="botao">GitHub</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Yasmin</p>
+  </footer>
+
+</body>
+</html>

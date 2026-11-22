@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>LOCAmovie</title>
+
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    text-align: center;
+}
+
+header {
+    background: #2d0000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav {
+    background: rgb(179, 0, 0);
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- CONTEÚDO EM DUAS COLUNAS (MAIN + ASIDE) --- */
+
+.layout {
+    
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.img-cinema{
+    width: 200px;
+    height: auto;
+}
+
+/* MAIN ocupa mais espaço */
+main {
+    flex: 3;
+}
+
+/* ASIDE lateral */
+aside {
+    flex: 1;
+    max-width: 300px;
+    background: rgb(139, 0, 0);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+aside h2, aside h3 {
+    text-align: center;
+}
+
+aside ul {
+    padding-left: 0;
+}
+aside img {
+    width: 70%;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+aside img:hover {
+    transform: scale(1.1);
+}
+
+/* SECTIONS */
+
+section {
+    background: rgb(139, 0, 0);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* PRODUTOS */
+.produtos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+.produto {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.produto img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.produto img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #d10000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.botao:hover {
+    background: #f12626;
+}
+
+footer {
+    background: #2d0000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎥🎟️🍿</h1>
+    <h2>LOCAmovie</h2>
+    <h3>Sua locadora preferida</h3>
+</header>
+
+<nav>
+    <a href="pagina.1.html">Início</a>
+    <a href="PAGINA3.html">Sobre</a>
+    <a href="PAGINA2.html">Contato</a>
+</nav>
+
+<!-- LAYOUT (MAIN + ASIDE) -->
+<div class="layout">
+
+<main>
+
+<!-- INTRO -->
+<section>
+    <h2>Bem-vindo</h2>
+    <p>
+     🎬🍿 Bem-vindo à nossa locadora de filmes! 🍿🎬<br>
+    Prepare a pipoca, escolha seu filme favorito e aproveite momentos inesquecíveis com quem você gosta.<br>
+    Aqui você encontra diversão, emoção, aventura, romance e muitos clássicos para todas as idades.<br>
+    Nossa missão é levar entretenimento, nostalgia e boas histórias até você, com um atendimento acolhedor e uma seleção feita com carinho.<br>
+    Sinta-se em casa, explore nosso catálogo e curta cada sessão como se fosse estreia de cinema!✨<br>
+    </p>
+</section>
+
+<!-- PRODUTOS -->
+<section>
+    <h2>- Filmes em Destaque -</h2>
+
+    <div class="produtos">
+
+        <div class="produto">
+            <img src="MICHAEL.avif" width="150" height="200">
+            <a href="https://youtu.be/14YXeHKOBUY?si=DKBlut1fUhJmEsq4get=" target="_blank" class="botao">
+             Ver Trailer
+            </a>
+        </div>
+
+        <div class="produto">
+            <img src="DIABO.jpg" width="150" height="200">
+            <a href="https://youtu.be/QYfzd3o5XzI?si=FR67ZvVjUyAiAup1" target="_blank" class="botao">
+             Ver Trailer
+            </a>
+        </div>
+
+        <div class="produto">
+            <img src="MORTAL.jpg" width="150" height="200">
+            <a href="https://youtu.be/mXHanabYyOg?si=pEBNVW-1ix8xIc1a" target="_blank" class="botao">
+             Ver Trailer
+            </a>
+        </div>
+
+        <p>
+         <a href="filmes.html" target="_blank" class="botao">+ Filmes</a>
+        </p>
+    </div>
+</section>
+
+
+<section>
+    <h2>Por que escolher nossa locadora? 🎬</h2>
+    <ul>
+        <li>🎥 Grande variedade de filmes</li>
+        <li>🍿 Clássicos e lançamentos</li>
+        <li>💰 Preços acessíveis</li>
+        <li>📀 Qualidade excelente</li>
+        <li>👨‍👩‍👧 Para toda a família</li>
+    </ul>
+</section>
+
+<!-- MAPA -->
+<section>
+    <h2>Cinema Lençóis Paulista</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!3m2!1spt-BR!2sbr!4v1779136976866!5m2!1spt-BR!2sbr!6m8!1m7!1sWBaIiIaPJg07F4O9kf2WqQ!2m2!1d-22.60870922300002!2d-48.79959327368099!3f195.98468!4f0!5f0.7820865974627469"
+   width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<section>
+<iframe src="https://www.cmcinemas.com.br/lencois/programacao" width="300"
+height="300"></iframe>
+</section>
+
+<!-- LINK INTERNO -->
+<section>
+    <h2>Saiba mais</h2>
+    <p>
+        Saiba mais em <a href="sobre.html">Sobre a loja</a>
+    </p>
+</section>
+
+
+</main>
+
+<div>
+<!-- ASIDE LATERAL -->
+<aside>
+    <h2>Melhores Animações</h2>
+    <ul>
+        <li>✔ Bela e a Fera</li>
+        <li>✔ Enrolados</li>
+        <li>✔ Frozen</li>
+        <li>✔ Monstros S.A</li>
+        <li>✔ Toy Story</li>
+        <li>✔ Meu Malvado Favorito</li>
+        <li>✔ Rio</li>
+        <li>✔ Rei Leão</li>
+        <li>✔ Shrek</li>
+        <li>✔ Barbie</li>
+        <li>✔ Gato de Botas</li>
+        <li>✔ Carros</li>
+        <li>✔ Como Treinar Seu Dragão</li>
+        <li>✔ Sing</li>
+        <li>✔ Pets</li>
+        <li>✔ Trolls</li>
+        <li>✔ Kung Fu Panda</li>
+        <li>✔ Universidade Monstros</li>
+        <li>✔ Up!</li>
+        <li>✔ Zootopia</li>
+        <li>✔ Etc...</li>
+    </ul>
+
+    <h3>Melhores Streamings</h3>
+
+    <a href="https://www.netflix.com/br/" target="_blank">
+    <img src="NETFLIX.jpg" alt="NETFLIX">
+
+    <a href="https://www.primevideo.com/" target="_blank">
+    <img src="PRIME.png" alt="PRIME VIDEO">
+    
+    <a href="https://www.disneyplus.com/pt-br" target="_blank">
+     <img src="DISNEY.jpg" alt="DISNEY+">
+    
+    <a href="https://www.hbomax.com/br/pt" target="_blank">
+    <img src="HBO.png" alt="HBO MAX">
+    
+
+    </a>
+</aside>
+<aside>
+    <img src="cinema.gif" alt="Cinema" class="img-cinema">
+</aside>
+<aside>
+    <H2>⭐CRIADOR⭐</H2>
+    <P> PÁGINA BY YASMIN CALDEIRA a mais mais ++!</P>
+</aside>
+
+</div>
+
+</div>
+
+<footer>
+    <h3>@LOCAmovie</h3>
+</footer>
+
+</body>
+</html>

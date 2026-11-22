@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua agência de viagens</title>
+
+    <style>
+        body{
+
+            background-color: white;
+            font-family: 'Lora', serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #1a1a2e;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.2rem;
+            color: #063e76;
+            letter-spacing: 0.5px;
+            margin: 40px 0 20px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: #063e76;
+            margin: 10px 0 5px;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #0b2a4a;
+            margin: 15px 0;
+        }
+
+        p {
+            font-family: 'Lora', serif;
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.5;
+            margin: 8px 0;
+        }
+
+        header {
+            background-color: #063e76;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            width: 250px;
+            height: auto;
+            object-fit: contain;
+            border: 5px solid white;
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
+        }
+
+        nav {
+            background: rgb(159, 181, 246);
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: rgb(1, 9, 40);
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .lista-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px;
+            border-color: rgb(1, 20, 37);
+        }
+
+        .card {
+            width: 220px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            padding: 15px;
+            font-family: Arial;
+        }
+
+        .foto {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    
+
+   
+
+        footer{
+            background-color: #063e76;
+        }
+
+
+        .subtitulo {
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .grade-locadoras {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+            padding: 0 20px 50px;
+        }
+
+        .card-locadora {
+            width: 220px;
+            background-color: #fff;
+            border: 1px solid #e2e2e2;
+            border-radius: 12px;
+            padding: 14px;
+            text-align: left;
+            position: relative;
+            font-family: 'Lora', serif;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            transition: 0.2s;
+        }
+
+        .card-locadora:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+
+
+        .imagem-carro {
+            font-size: 3.2rem;
+            text-align: center;
+            margin: 5px 0 10px;
+            line-height: 1;
+        }
+
+        .imagem-carro img {
+            width: 100%;
+            height: 90px;
+            object-fit: contain;
+        }
+
+        .selo-locadora {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .nome-carro {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #0b2a4a;
+            margin: 0;
+        }
+
+        .carro-similar {
+            font-size: 0.8rem;
+            color: #666;
+            margin: 2px 0 10px;
+        }
+
+        .especificacoes {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.8rem;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .especificacoes img {
+            vertical-align: middle;
+            margin-right: 3px;
+        }
+
+        .linha-preco {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .preco-diaria {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #0b2a4a;
+        }
+
+        .preco-diaria small {
+            font-family: 'Lora', serif;
+            font-weight: 400;
+            font-size: 0.75rem;
+            color: #666;
+        }
+
+        .ver-oferta {
+            background-color: #ff6a00;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .ver-oferta:hover {
+            background-color: #e35d00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="logoAeroFly.png" alt="Logo AeroFly">
+    </header>
+
+    <nav>
+        <a href="YASAERO.html">Início</a><img src="casa.png" width="20" height="20">
+         <a href="plano_viagen.html">Seu Plano</a><img src="viagem.png" width="20" height="20">
+        <a href="destinos.html">Destinos </a><img src="aviao.png" width="20" height="20">
+        <a href="carros.html">Carros</a><img src="carro.png" width="20" height="20">
+    </nav>
+
+    <h1>Alugue seu carro em qualquer lugar</h1>
+
+    <section class="lista-cards">
+
+        <div class="card">
+            <img class="foto" src="GRANDE.jpg" alt="Carros Grandes">
+            <h2>Carros Grandes</h2>
+            <p>Em Aeroporto Internacional Orlando<br>com CAPITAL RENT A CAR</p>
+            <p>Tarifa diária a partir de R$ 71,00</p>
+            <button class="ver-oferta">Ver oferta</button>     
+           </div>
+
+        <div class="card">
+            <img class="foto" src="PEQUENO.jpg" alt="Carros Pequenos">
+            <h2>Carros Pequenos</h2>
+            <p>Em São Paulo com Unidas</p>
+            <p>Tarifa diária a partir de R$ 100,00</p>
+            <button class="ver-oferta">Ver oferta</button>
+        </div>
+
+        <div class="card">
+            <img class="foto" src="LUXO.jpg" alt="Carros de Luxo">
+            <h2>Carros de Luxo</h2>
+            <p>Em Aeroporto Internacional Miami<br>com Boutique Rent a Car</p>
+            <p>Tarifa diária a partir de R$ 53,00</p>
+            <button class="ver-oferta">Ver oferta</button>
+        </div>
+
+    </section>
+
+    <br>
+
+    <h1>Compare as melhores ofertas</h1>
+    <p class="subtitulo">Descubra os melhores preços ao selecionar suas datas de viagem no AeroFly.</p>
+
+    <section class="grade-locadoras">
+
+        <div class="card-locadora">
+            <div class="imagem-carro"><img src="polo.jpg" alt="Volkswagen Polo"></div>
+            <p class="nome-carro">Volkswagen Polo</p>
+            <p class="carro-similar">ou Pequeno similar</p>
+            <div class="especificacoes">
+                <img src="pessoa.png" height="20" width="20"> 2
+                <img src="bagagem-de-viagem.png" height="20" width="20"> 2
+                <img src="posto-de-gasolina.png" height="20" width="20"> 4-5
+            </div>
+            <div class="linha-preco">
+                <p class="preco-diaria">R$ 67 <small>/dia</small></p>
+                <button class="ver-oferta">Ver oferta</button>
+            </div>
+        </div>
+
+        <div class="card-locadora">
+            <div class="imagem-carro"><img src="gol.jpg" alt="Volkswagen Gol"></div>
+            <p class="nome-carro">Volkswagen Gol</p>
+            <p class="carro-similar">ou Pequeno similar</p>
+            <div class="especificacoes">
+                <img src="pessoa.png" height="20" width="20"> 4
+                <img src="bagagem-de-viagem.png" height="20" width="20"> 2
+                <img src="posto-de-gasolina.png" height="20" width="20"> 4-5
+            </div>
+            <div class="linha-preco">
+                <p class="preco-diaria">R$ 68 <small>/dia</small></p>
+                <button class="ver-oferta">Ver oferta</button>
+            </div>
+        </div>
+
+        <div class="card-locadora">
+            <div class="imagem-carro"><img src="cronos.webp" alt="Fiat Cronos"></div>
+            <p class="nome-carro">Fiat Cronos</p>
+            <p class="carro-similar">ou Médio similar</p>
+            <div class="especificacoes">
+                <img src="pessoa.png" height="20" width="20"> 5
+                <img src="bagagem-de-viagem.png" height="20" width="20"> 3
+                <img src="posto-de-gasolina.png" height="20" width="20"> 4-5
+            </div>
+            <div class="linha-preco">
+                <p class="preco-diaria">R$ 71 <small>/dia</small></p>
+                <button class="ver-oferta">Ver oferta</button>
+            </div>
+        </div>
+
+        <div class="card-locadora">
+            <div class="imagem-carro"><img src="hb20s.webp" alt="Hyundai HB20S"></div>
+            <p class="nome-carro">Hyundai HB20S</p>
+            <p class="carro-similar">ou Médio similar</p>
+            <div class="especificacoes">
+                <img src="pessoa.png" height="20" width="20"> 5
+                <img src="bagagem-de-viagem.png" height="20" width="20"> 3
+                <img src="posto-de-gasolina.png" height="20" width="20"> 4-5
+            </div>
+            <div class="linha-preco">
+                <p class="preco-diaria">R$ 74 <small>/dia</small></p>
+                <button class="ver-oferta">Ver oferta</button>
+            </div>
+        </div>
+
+        <div class="card-locadora">
+            <div class="imagem-carro"><img src="hcivic.webp" alt="Honda Civic"></div>
+            <p class="nome-carro">Honda Civic</p>
+            <p class="carro-similar">ou Grande similar</p>
+            <div class="especificacoes">
+                <img src="pessoa.png" height="20" width="20"> 5
+                <img src="bagagem-de-viagem.png" height="20" width="20"> 2
+                <img src="posto-de-gasolina.png" height="20" width="20"> 4-5
+            </div>
+            <div class="linha-preco">
+                <p class="preco-diaria">R$ 250 <small>/dia</small></p>
+                <button class="ver-oferta">Ver oferta</button>
+            </div>
+        </div>
+
+        <div class="card-locadora">
+            <div class="imagem-carro"><img src="spin7.jpg" alt="Chevrolet Spin"></div>
+            <p class="nome-carro">Chevrolet Spin</p>
+            <p class="carro-similar">ou Van similar</p>
+            <div class="especificacoes">
+                <img src="pessoa.png" height="20" width="20"> 5
+                <img src="bagagem-de-viagem.png" height="20" width="20"> 5
+                <img src="posto-de-gasolina.png" height="20" width="20"> 4-5
+            </div>
+            <div class="linha-preco">
+                <p class="preco-diaria">R$ 167 <small>/dia</small></p>
+                <button class="ver-oferta">Ver oferta</button>
+            </div>
+        </div>
+
+        <div class="card-locadora">
+            <div class="imagem-carro"><img src="compass.webp" alt="Jeep Compass"></div>
+            <p class="nome-carro">Jeep Compass</p>
+            <p class="carro-similar">ou SUV similar</p>
+            <div class="especificacoes">
+                <img src="pessoa.png" height="20" width="20"> 5
+                <img src="bagagem-de-viagem.png" height="20" width="20"> 2
+                <img src="posto-de-gasolina.png" height="20" width="20"> 4-5
+            </div>
+            <div class="linha-preco">
+                <p class="preco-diaria">R$ 175 <small>/dia</small></p>
+                <button class="ver-oferta">Ver oferta</button>
+            </div>
+        </div>
+
+        <div class="card-locadora">
+            <div class="imagem-carro"><img src="kwid.jpg" alt="Renault Kwid"></div>
+            <p class="nome-carro">Renault Kwid</p>
+            <p class="carro-similar">ou Pequeno similar</p>
+            <div class="especificacoes">
+                <img src="pessoa.png" height="20" width="20"> 2
+                <img src="bagagem-de-viagem.png" height="20" width="20"> 2
+                <img src="posto-de-gasolina.png" height="20" width="20"> 4-5
+            </div>
+            <div class="linha-preco">
+                <p class="preco-diaria">R$ 58 <small>/dia</small></p>
+                <button class="ver-oferta">Ver oferta</button>
+            </div>
+        </div>
+
+        <div class="card-locadora">
+            <div class="imagem-carro"><img src="chevos.avif" alt="Chevrolet Spin"></div>
+            <p class="nome-carro">Chevrolet Spin</p>
+            <p class="carro-similar">ou Van similar</p>
+            <div class="especificacoes">
+                <img src="pessoa.png" height="20" width="20"> 5
+                <img src="bagagem-de-viagem.png" height="20" width="20"> 2
+                <img src="posto-de-gasolina.png" height="20" width="20"> 4-5
+            </div>
+            <div class="linha-preco">
+                <p class="preco-diaria">R$ 165 <small>/dia</small></p>
+                <button class="ver-oferta">Ver oferta</button>
+            </div>
+        </div>
+
+        <div class="card-locadora">
+            <div class="imagem-carro"><img src="estrada.webp" alt="Fiat Strada"></div>
+            <p class="nome-carro">Fiat Strada</p>
+            <p class="carro-similar">ou Picape similar</p>
+            <div class="especificacoes">
+                <img src="pessoa.png" height="20" width="20"> 4
+                <img src="bagagem-de-viagem.png" height="20" width="20"> 2
+                <img src="posto-de-gasolina.png" height="20" width="20"> 2/4
+            </div>
+            <div class="linha-preco">
+                <p class="preco-diaria">R$ 94 <small>/dia</small></p>
+                <button class="ver-oferta">Ver oferta</button>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <br>
+        @AeroFly a sua agênciade viagem✈️
+        <BR>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bolinho de cenoura</title>
+
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            text-align: center;
+            background-color: #ff7e2e;
+        }
+
+        header {
+            background-color: oklch(31.422% 0.05751 61.817); 
+            color: #fc6507;
+            padding: 15px;
+        }
+
+        p {
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            color: rgb(241, 161, 86);
+        }
+
+        h2 {
+            color: black;
+        }
+
+        h3 {
+            color: hsla(0, 0%, 0%, 0.916);
+        }
+
+        /* TEXTO + IMAGEM DE CIMA */
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .conteudo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        /* AQUI ESTÁ A CORREÇÃO */
+        .texto {
+            text-align: left;
+            max-width: 400px; /* controla quebra de linha */
+        }
+
+        .conteudo img {
+            max-width: 350px;
+            height: auto;
+        }
+
+        ul, ol {
+            text-align: left;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        /* BLOCO DE BAIXO */
+        .bloco {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .lado-esquerdo {
+            text-align: center;
+        }
+
+        .imagens {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* IMAGENS QUADRADAS */
+        .imagens img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: hsla(17, 92%, 15%, 0.87);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>bolinho</h1>
+        <p>
+            O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã e no lanche da tarde.
+            Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma receita que conquista o coração de todos!
+            Veja como fazer um bolo de cenoura prático e perfeito para acompanhar um café.
+        </p>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="conteudo">
+
+                <div class="texto">
+                    <h2>INGREDIENTES</h2>
+
+                    <h3>Massa</h3>
+                    <ol>
+                        <li>1/2 xícara (chá) de óleo</li>
+                        <li>ovos</li>    
+                        <li>2 e 1/2 xícaras (chá) de farinha de trigo</li>
+                        <li>3 cenouras médias raladas</li>
+                        <li>2 xícaras (chá) de açúcar</li>
+                        <li>1 colher (sopa) de fermento em pó</li>
+                    </ol>
+
+                    <h3>Cobertura</h3>
+                    <ol>
+                        <li>1 colher (sopa) de manteiga</li>
+                        <li>1 xícara (chá) de açúcar</li>
+                        <li>3 colheres (sopa) de chocolate em pó</li>
+                        <li>1 xícara (chá) de leite</li>
+                    </ol>
+                </div>
+
+                <img src="Imagem.jpeg" alt="imagem ilustrativa ingredientes">
+
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="conteudo">
+
+                <div class="texto">
+                    <h2>Modo de preparo : 40min</h2>
+
+                    <h3>Massa</h3>
+                    <ol>
+                        <li>Em um liquidificador, adicione a cenoura, os ovos e o óleo, depois misture.</li>
+                        <li>Acrescente o açúcar e bata novamente por 5 minutos.</li>    
+                        <li>Em uma tigela ou na batedeira, adicione a farinha de trigo e depois misture novamente.</li>
+                        <li>Acrescente o fermento e misture lentamente com uma colher.</li>
+                        <li>Asse em um forno preaquecido a 180° C por aproximadamente 40 minutos.</li>
+                    </ol>
+
+                    <h3>Cobertura</h3>
+                    <ol>
+                        <li>Despeje em uma tigela a manteiga, o chocolate em pó, o açúcar e o leite, depois misture.</li>
+                        <li>Leve a mistura ao fogo e continue misturando até obter uma consistência cremosa, depois despeje a calda por cima do bolo.</li>
+                    </ol>
+                </div>
+
+                <img src="bolo.png" alt="imagem ilustrativa bolo">
+
+            </div>
+        </section>
+    </main>
+
+    <!-- BLOCO COM TABELA + IMAGENS -->
+    <div class="bloco">
+
+        <div class="lado-esquerdo">
+            <table border="1">
+                <tr>
+                    <th>bolo</th>
+                    <th>cobertura</th>
+                    <th>lugar</th>
+                </tr>
+                <tr>
+                    <td>Cenoura</td>
+                    <td>chocolate</td>
+                    <td>Dona Boleira</td>
+                </tr>
+                <tr>
+                    <td>Iogurt</td>
+                    <td>ninho</td>
+                    <td>Dona Boleira</td>
+                </tr>
+                <tr>
+                    <td>Chocolate</td>
+                    <td>chocolate</td>
+                    <td>Dona Madalena</td>
+                </tr>
+                <tr>
+                    <td>Fubá</td>
+                    <td>goiabada</td>
+                    <td>Dona Boleira</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <label>bolo favorito:</label><br>
+            <select name="bolo favorito">
+                <option>Chocolate</option>
+                <option>Cenoura</option>
+                <option>Nozes</option>
+                <option>Leite Ninho</option>
+                <option>Fubá</option>
+                <option>Outro</option>
+            </select>
+        </div>
+
+        <div class="imagens">
+            <a href="https://www.instagram.com/donamadalenabolosetorta/?hl=pt-br" target="_blank">
+                <img src="madalena.png">
+            </a>
+
+            <a href="https://www.instagram.com/donaboleira/?hl=pt" target="_blank">
+                <img src="boleira.png">
+            </a>
+        </div>
+
+    </div>
+
+    <br>
+
+    <button onclick="mostrarRecado()">clique aqui</button>
+
+    <script>
+        function mostrarRecado() {
+            alert("obrigado por escolher a minha página, espero que seu bolo fique uma delícia! 🍰🥕🍫");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua agência de viagens</title>
+
+    <style>
+
+        body{
+
+            background-color: white;
+            font-family: 'Lora', serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #1a1a2e;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.2rem;
+            color: #063e76;
+            letter-spacing: 0.5px;
+            margin: 40px 0 20px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: #063e76;
+            margin: 10px 0 5px;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #0b2a4a;
+            margin: 15px 0;
+        }
+
+        p {
+            font-family: 'Lora', serif;
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.5;
+            margin: 8px 0;
+        }
+
+        header {
+            background-color: #063e76;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            width: 250px;
+            height: auto;
+            object-fit: contain;
+            border: 5px solid white;
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
+        }
+
+        nav {
+            background: rgb(159, 181, 246);
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: rgb(1, 9, 40);
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .banner-meio {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .banner-meio img {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            border-radius: 25px;
+            background-color: white;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        .lista-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px;
+            border-color: rgb(1, 20, 37);
+        }
+
+        .card {
+            width: 220px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            padding: 15px;
+            font-family: Arial;
+        }
+
+        .foto {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .selo-verde {
+            background-color: lightgreen;
+            padding: 5px;
+            display: inline-block;
+        }
+
+        .nota {
+            background-color: green;
+            color: white;
+            padding: 3px 8px;
+        }
+
+        .foto-destaque {
+            height: 270px;
+            width: 100%;
+            max-width: 1000px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .foto-destaque:hover {
+            transform: scale(1.05);
+        }
+
+        .imagem-com-botao {
+            position: relative;
+            display: inline-block;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .botao-saiba-mais {
+       
+         position: absolute;
+         bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+         background-color: #063e76;
+         color: white;
+         padding: 12px 28px;
+         border-radius: 30px;
+         text-decoration: none;
+        }
+
+        .botao-formulario {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #cddeef;
+             color: #063e76;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        .botao-formulario:hover {
+             background-color: #063e76;
+            color: white;
+            transform: translateX(-50%) scale(1.05);
+        }
+
+           .cadastrar {
+        background-color: #063e76;
+         color: white;
+         border: none;
+         padding: 12px 28px;
+         border-radius: 30px;
+         cursor: pointer;
+        }
+
+        footer{
+            background-color: #063e76;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="logoAeroFly.png" alt="Logo AeroFly">
+    </header>
+
+    <nav>
+        <a href="YASAERO.html">Início</a><img src="casa.png" width="20" height="20">
+         <a href="plano_viagen.html">Seu Plano</a><img src="viagem.png" width="20" height="20">
+        <a href="destinos.html">Destinos </a><img src="aviao.png" width="20" height="20">
+        <a href="carros.html">Carros</a><img src="carro.png" width="20" height="20">
+    </nav>
+
+    <div class="banner-meio">
+        <img src="imagemeio.png" alt="Banner promocional">
+    </div>
+
+    <br>
+
+    <section class="lista-cards">
+        <div class="card">
+            <img src="pagamento-com-cartao-de-credito.png" width="40" height="40" alt="Pagamento">
+            <h3>Formas de pagamento</h3>
+            <p>Parcele em 12x, ganhe desconto no Pix ou combine formas de pagamento. Compre com flexibilidade!</p>
+        </div>
+
+        <div class="card">
+            <img src="cupom-de-desconto.png" width="40" height="40" alt="Cupom">
+            <h3>Benefícios e cupons</h3>
+            <p>Acumule pontos Passaporte e use cupons exclusivos para economizar na sua próxima viagem.</p>
+        </div>
+
+        <div class="card">
+            <img src="agente-de-call-center.png" width="40" height="40" alt="Atendimento">
+            <h3>Meu agente AeroFly</h3>
+            <p>Quer ajuda humana e especializada? Ligue no 0800-883-6342 ou fale no canal que preferir.</p>
+        </div>
+
+        <div class="card">
+            <img src="IFOOD.png" width="40" height="40" alt="iFood">
+            <h3>Decolar + iFood</h3>
+            <p>Seus pedidos no iFood viram descontos pra viajar! Conheça e comece a aproveitar agora mesmo.</p>
+        </div>
+    </section>
+
+    <br>
+    <div class="banner-meio">
+        <div class="imagem-com-botao">
+            <img src="corrigida.png">
+            <a href="plano_viagen.html" class="botao-formulario">Acesse um formulário e comece seu plano personalizado</a>
+        </div>
+    </div>
+
+    <h1>Hospedagens para aproveitar</h1>
+    <section class="lista-cards">
+
+        <div class="card">
+            <img class="foto" src="APRAZIVEL.jpg" alt="Hotel casa Aprazível">
+            <p class="selo-verde">Reserve Sem Pagar Nada Agora</p>
+            <h2>Hotel casa Aprazível</h2>
+            <p>
+                <span class="nota">10.0</span>
+                ★★
+            </p>
+            <p>quint 22 out - dom 25 out</p>
+        </div>
+
+        <div class="card">
+            <img class="foto" src="aguacoco.jfif" alt="Hotel água de Coco">
+            <p class="selo-verde">Reserve Sem Pagar Nada Agora</p>
+            <h2>Hotel água de Coco</h2>
+            <p>
+                <span class="nota">9.2</span>
+                ★★★★
+            </p>
+            <p>Hotel+Aéreo/sex 27 nov - sex 14h20</p>
+        </div>
+
+        <div class="card">
+            <img class="foto" src="natal.jpg" alt="Porto Suites Natal Hotel">
+            <p class="selo-verde">Reserve Sem Pagar Nada Agora</p>
+            <h2>Porto suites natal hotel</h2>
+            <p>
+                <span class="nota">10</span>
+                ★★★★★
+            </p>
+            <p>Hotel+Aéreo/ ter 15 dez - seg 21 dez</p>
+        </div>
+
+        <div class="card">
+            <img class="foto" src="libertador.jpg" alt="Hotel Libertador">
+            <p class="selo-verde">Reserve Sem Pagar Nada Agora</p>
+            <h2>Hotel libertador</h2>
+            <p>
+                <span class="nota">9.2</span>
+                ★★★★
+            </p>
+            <p>Hotel+Aéreo/ sex 25 dez - quin 31 dez</p>
+        </div>
+
+    </section>
+    <br>
+    <img class="foto-destaque" src="img1.png" alt="Destaque 1">
+    <img class="foto-destaque" src="img2.png" alt="Destaque 2">
+
+    <h1>Pacotes IMPERDIVEIS</h1>
+    <section class="lista-cards">
+
+        <div class="card">
+            <img class="foto" src="ATLANTICO.jpg" >
+            <p class="selo-verde">6 dias/ 7 noites</p>
+            <h2>Hotel Atlântico Business Centro</h2>
+            <p>
+                <span class="nota">7.3</span>
+                ★★
+            </p>
+            <p>Hotel+Aéreo/sex 02 out - qua 07 out</p>
+            <p>Preço por pessoa R$ 1.078</p>
+        </div>
+
+        <div class="card">
+            <img class="foto" src="porto.jpg">
+            <p class="selo-verde">8 dias/ 7 noites</p>
+            <h2>Rede Andrade POrto Mar</h2>
+            <p>
+                <span class="nota">8.1</span>
+                ★★★★
+            </p>
+            <p>Hotel+Aéreo/qua 14 out- qua 21 out</p>
+             <p>Preço por pessoa R$ 2.177</p>
+        </div>
+
+        <div class="card">
+            <img class="foto" src="suites.jpg">
+            <p class="selo-verde">6 dias/ 5 noites</p>
+            <h2>Porto suites natal hotel</h2>
+            <p>
+                <span class="nota">7.8</span>
+                ★★★
+            </p>
+            <p>Hotel+Aéreo/ seg 23 nov - sáb 28 nov</p>
+             <p>Preço por pessoa R$ 1.632</p>
+        </div>
+
+        <div class="card">
+            <img class="foto" src="somelier.webp">
+            <p class="selo-verde">8 dias/ 7 noites</p>
+            <h2> Hotel Sommelier Agustinas</h2>
+            <p>
+                <span class="nota">8.7</span>
+                ★★★★
+            </p>
+            <p>Hotel+Aéreo/ qua 02 dez - qua 09 dez</p>
+        </div>
+
+    </section>
+
+    <br>
+
+    <div class="imagem-com-botao">
+        <img class="foto-destaque" src="mais.png">
+        <a href="destinos.html" class="botao-saiba-mais">Saiba mais</a>
+    </div>
+<br>
+
+    <img src="email.png" width="60" height="60">
+    <h3> Inscreva-se para receber ofertas exclusivas</h3>
+    <label for="email"></label>
+    <input type="email" id="email" placeholder="digite seu e-mail">
+    <p>Você receberá e-mails promocionais da Decolar. Para mais informações, consulte as políticas de privacidade.</p>
+    <div class="botoes">
+        <button type="submit" class="cadastrar">cadastrar</button>
+    <div>
+<br> 
+
+        <footer>
+       <br>
+       @AeroFly a sua agênciade viagem✈️
+       <BR>
+        </footer>
+</body>
+</html>

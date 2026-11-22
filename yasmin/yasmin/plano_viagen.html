@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua agência de viagens</title>
+
+    <style>
+        body{
+
+            background-color: white;
+            font-family: 'Lora', serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #1a1a2e;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.2rem;
+            color: #063e76;
+            letter-spacing: 0.5px;
+            margin: 40px 0 20px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: #063e76;
+            margin: 10px 0 5px;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #0b2a4a;
+            margin: 15px 0;
+        }
+
+        p {
+            font-family: 'Lora', serif;
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.5;
+            margin: 8px 0;
+        }
+
+        header {
+            background-color: #063e76;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            width: 250px;
+            height: auto;
+            object-fit: contain;
+            border: 5px solid white;
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
+        }
+
+        nav {
+            background: rgb(159, 181, 246);
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: rgb(1, 9, 40);
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .banner-meio {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .banner-meio img {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            border-radius: 25px;
+            background-color: white;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        .lista-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px;
+            border-color: rgb(1, 20, 37);
+        }
+
+        .card {
+            width: 220px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            padding: 15px;
+            font-family: Arial;
+        }
+
+        .foto {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .selo-verde {
+            background-color: lightgreen;
+            padding: 5px;
+            display: inline-block;
+        }
+
+        .nota {
+            background-color: green;
+            color: white;
+            padding: 3px 8px;
+        }
+
+        .foto-destaque {
+            height: 270px;
+            width: 100%;
+            max-width: 1000px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .foto-destaque:hover {
+            transform: scale(1.05);
+        }
+
+        .imagem-com-botao {
+            position: relative;
+            display: inline-block;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .botao-saiba-mais {
+       
+         position: absolute;
+         bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+         background-color: #063e76;
+         color: white;
+         padding: 12px 28px;
+         border-radius: 30px;
+         text-decoration: none;
+        }
+
+        .botao-formulario {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #cddeef;
+             color: #063e76;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        .botao-formulario:hover {
+             background-color: #063e76;
+            color: white;
+            transform: translateX(-50%) scale(1.05);
+        }
+
+           .cadastrar {
+        background-color: #063e76;
+         color: white;
+         border: none;
+         padding: 12px 28px;
+         border-radius: 30px;
+         cursor: pointer;
+        }
+
+        footer{
+            background-color: #063e76;
+        }
+
+        /* Estilos específicos do formulário, seguindo o padrão .card já existente */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .card-form {
+            width: 100%;
+            max-width: 420px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: left;
+            font-family: 'Lora', serif;
+        }
+
+        label {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #063e76;
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid gray;
+            border-radius: 8px;
+            font-family: 'Lora', serif;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+
+        .cadastrar {
+            display: block;
+            margin: 25px auto 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="logoAeroFly.png" alt="Logo AeroFly">
+    </header>
+
+    <nav>
+        <a href="YASAERO.html">Início</a><img src="casa.png" width="20" height="20">
+         <a href="plano_viagen.html">Seu Plano</a><img src="viagem.png" width="20" height="20">
+        <a href="destinos.html">Destinos </a><img src="aviao.png" width="20" height="20">
+        <a href="carros.html">Carros</a><img src="carro.png" width="20" height="20">
+    </nav>
+
+    <h1>Monte seu plano de viagem</h1>
+
+    <div class="form-container">
+        <form class="card-form">
+            <label>Nome:</label>
+            <input type="text">
+
+            <label>Telefone:</label>
+            <input type="tel">
+
+            <label>E-mail:</label>
+            <input type="email">
+
+            <label>Cidade onde mora:</label>
+            <input type="text">
+
+            <label>Destino:</label>
+            <input type="text">
+
+            <label>Valor disponível:</label>
+            <input type="text">
+
+            <label>Quantas pessoas:</label>
+            <input type="number">
+
+            <label>Vai menor de idade?</label>
+            <select>
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+            </select>
+
+            <label>Idade do menor (se houver):</label>
+            <input type="number">
+
+            <label>Quantos dias:</label>
+            <input type="number">
+
+            <label>Transporte:</label>
+            <select>
+                <option value="aviao">Avião</option>
+                <option value="carro">Carro</option>
+                <option value="onibus">Ônibus</option>
+            </select>
+
+            <button type="submit" class="cadastrar">Enviar</button>
+        </form>
+    </div>
+
+    <br>
+
+    <footer>
+        <br>
+        <p>@AeroFly a sua agênciade viagem✈️</p>
+        <BR>
+    </footer>
+
+</body>
+</html>
